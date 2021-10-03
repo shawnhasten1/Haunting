@@ -1,0 +1,665 @@
+tiles = [
+    {
+        "directions": [
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_21.jpg", 
+        "name": "Gymnasium", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_37.jpg", 
+        "name": "Collapsed Room", 
+        "type": None,
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_42.jpg", 
+        "name": "Coal Chute", 
+        "type": None,
+        "special":{
+            "status":"move",
+            "tile":"tile_03.jpg"
+        }
+    },
+    {
+        "directions": [ 
+            "right", 
+            "up"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_43.jpg", 
+        "name": "Dining Room", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "down"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_27.jpg", 
+        "name": "Attic", 
+        "type": "event",
+        "special":{
+            "status":"end",
+            "effect":"might",
+            "mod":-1,
+            "challenge":"speed",
+            "challenge_mod":3
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_58.jpg", 
+        "name": "Furnace Room", 
+        "type": "omen",
+        "special":{
+            "status":"end",
+            "effect":"health",
+            "mod":-1
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_06.jpg", 
+        "name": "Dusty Hallway", 
+        "type": None,
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up", 
+            "right",
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_63.jpg", 
+        "name": "Underground Lake", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up", 
+            "right",
+        ], 
+        "floor": [
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_50.jpg", 
+        "name": "Kitchen", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_46.jpg", 
+        "name": "Patio", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "right"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_29.jpg", 
+        "name": "Bedroom", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_39.jpg", 
+        "name": "Library", 
+        "type": "event",
+        "special":{
+            "status":"end",
+            "effect":"knowledge",
+            "mod":1
+        }
+    },
+    {
+        "directions": [ 
+            "up"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_25.jpg", 
+        "name": "Storeroom", 
+        "type": "item",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up",
+            "down"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_59.jpg", 
+        "name": "Larder", 
+        "type": "item",
+        "special":{
+            "status":"end",
+            "effect":"might",
+            "mod":1
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_08.jpg", 
+        "name": "Junk Room", 
+        "type": "omen",
+        "special":{
+            "status":"exit",
+            "effect":"speed",
+            "mod":-1,
+            "challenge":"might",
+            "challenge_mod":3
+        }
+    },
+    {
+        "directions": [ 
+            "up",  
+            "down"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_28.jpg", 
+        "name": "Balcony", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "right"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_60.jpg", 
+        "name": "Pentagram Room", 
+        "type": "omen",
+        "special":{
+            "status":"exit",
+            "effect":"sanity",
+            "mod":-1,
+            "challenge":"knowledge",
+            "challenge_mod":4
+        }
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_44.jpg", 
+        "name": "Gardens", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_41.jpg", 
+        "name": "Ballroom", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_36.jpg", 
+        "name": "Charred Room", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_22.jpg", 
+        "name": "Operating Laboratory", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [
+            "up"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_35.jpg", 
+        "name": "Chapel", 
+        "type": "event",
+        "special":{
+            "status":"end",
+            "effect":"sanity",
+            "mod":1
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_24.jpg", 
+        "name": "Servants Quarters", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_31.jpg", 
+        "name": "Junk Room", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [
+            "up"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_26.jpg", 
+        "name": "Junk Room", 
+        "type": "event",
+        "special":{
+            "status":"challenge",
+            "effect":"item",
+            "mod":2,
+            "challenge":"knowledge",
+            "challenge_mod":6
+        }
+    },
+    {
+        "directions": [ 
+            "up"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_09.jpg", 
+        "name": "Mystic Elevator", 
+        "type": "omen",
+        "special":{
+            "status":"move",
+            "effect":"elevator"
+        }
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_30.jpg", 
+        "name": "Gallery", 
+        "type": "omen",
+        "special":{
+            "status":"move_optional",
+            "tile":"tile_41.jpg",
+            "effect":"physical",
+            "mod":-1
+        }
+    },
+    {
+        "directions": [ 
+            "down"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_61.jpg", 
+        "name": "Stairs From Basement", 
+        "type": None,
+        "special":{
+            "status":"move",
+            "tile":"foyer.jpg"
+        }
+    },
+    {
+        "directions": [ 
+            "up"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_38.jpg", 
+        "name": "Consevatory", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_48.jpg", 
+        "name": "Abandoned Room", 
+        "type": "omen",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "right"
+        ], 
+        "floor": [
+            "upper"
+        ], 
+        "img": "tile_32.jpg", 
+        "name": "Tower", 
+        "type": "event",
+        "special":{
+            "status":"challenge",
+            "effect":"move",
+            "challenge":"might",
+            "challenge_mod":3
+        }
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_53.jpg", 
+        "name": "Catacombs", 
+        "type": "omen",
+        "special":{
+            "status":"challenge",
+            "effect":"move",
+            "challenge":"sanity",
+            "challenge_mod":6
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_05.jpg", 
+        "name": "Creaky Hallway", 
+        "type": None,
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_11.jpg", 
+        "name": "Statuary Corridor", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_07.jpg", 
+        "name": "Game Room", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left", 
+            "right"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_55.jpg", 
+        "name": "Chasm", 
+        "type": "omen",
+        "special":{
+            "status":"challenge",
+            "effect":"move",
+            "challenge":"speed",
+            "challenge_mod":3
+        }
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_64.jpg", 
+        "name": "Wine Cellar", 
+        "type": "item",
+        "special":{}
+    },
+    {
+        "directions": [ 
+            "left",
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground",
+            "basement"
+        ], 
+        "img": "tile_10.jpg", 
+        "name": "Organ Room", 
+        "type": "event",
+        "special":{}
+    },
+    {
+        "directions": [
+            "up"
+        ], 
+        "floor": [
+            "basement"
+        ], 
+        "img": "tile_56.jpg", 
+        "name": "Crypt", 
+        "type": "event",
+        "special":{
+            "status":"end",
+            "effect":"mental",
+            "mod":-1
+        }
+    },
+    {
+        "directions": [ 
+            "left", 
+            "up", 
+            "right", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "ground"
+        ], 
+        "img": "tile_34.jpg", 
+        "name": "Bloody Room", 
+        "type": "item",
+        "special":{}
+    },
+    {
+        "directions": [
+            "down"
+        ], 
+        "floor": [
+            "ground"
+        ], 
+        "img": "tile_45.jpg", 
+        "name": "Graveyard", 
+        "type": "event",
+        "special":{
+            "status":"exit",
+            "effect":"knowledge",
+            "mod":-1,
+            "challenge":"sanity",
+            "challenge_mod":4
+        }
+    },
+    {
+        "directions": [ 
+            "up", 
+            "down"
+        ], 
+        "floor": [
+            "upper",
+            "basement"
+        ], 
+        "img": "tile_36.jpg", 
+        "name": "Research Laboratory", 
+        "type": "event",
+        "special":{}
+    }
+]
