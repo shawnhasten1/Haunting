@@ -8,7 +8,7 @@ app.secret_key = '2abceVR5ENE7FgMxXdMwuzUJKC2g8xgy'
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 def connectToDB():
-    client = pymongo.MongoClient("mongodb+srv://admin:TheSpudfurd1@cluster0.ycplg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    client = pymongo.MongoClient(config.mongo_url)
     mongoDB = client['haunting']
     return mongoDB
 
